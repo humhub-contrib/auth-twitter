@@ -78,7 +78,8 @@ class ConfigureForm extends Model
         $this->clientId = $settings->get('clientId');
         $this->clientSecret = $settings->get('clientSecret');
 
-        $this->redirectUri = Url::to(['/user/auth/external', 'authclient' => 'twitter'], true);
+//        $this->redirectUri = Url::to(['/user/auth/external', 'authclient' => 'twitter'], true);
+        $this->redirectUri = Url::to(['user/auth/twitter'], true);
     }
 
     /**
