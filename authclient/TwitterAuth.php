@@ -2,13 +2,20 @@
 
 namespace humhubContrib\auth\twitter\authclient;
 
-use yii\authclient\clients\TwitterOAuth2;
+use yii\authclient\clients\Twitter;
 
 /**
  * Twitter allows authentication via Twitter OAuth.
  */
-class TwitterAuth extends TwitterOAuth2
+class TwitterAuth extends Twitter
 {
+    /**
+     * @inheritdoc
+     */
+    public $attributeParams = [
+        'include_email' => 'true'
+    ];
+
     /**
      * @inheritdoc
      */

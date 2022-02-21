@@ -24,8 +24,8 @@ use yii\helpers\Html;
             <?= $form->field($model, 'enabled')->checkbox(); ?>
 
             <br/>
-            <?= $form->field($model, 'clientId'); ?>
-            <?= $form->field($model, 'clientSecret'); ?>
+            <?= $form->field($model, 'consumerId'); ?>
+            <?= $form->field($model, 'consumerSecret'); ?>
 
             <br/>
             <?= $form->field($model, 'redirectUri')->textInput(['readonly' => true]); ?>
