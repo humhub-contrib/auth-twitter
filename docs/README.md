@@ -9,7 +9,7 @@ Please follow the [Twitter instructions](https://developer.twitter.com/en/docs/a
 
 Once you have the **Client ID** and **Client Secret** created there, the values must then be entered in the module configuration at: `Administration -> Modules -> Twitter Auth -> Settings`. 
 This page also displays the `Authorized redirect URI`, which must be inserted in Twitter in the corresponding field.
-
+You should also apply for Elevated API access level. Learn more [here](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#v2-access-levels).
 
 
 

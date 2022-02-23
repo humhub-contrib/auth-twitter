@@ -18,14 +18,14 @@ class ConfigureForm extends Model
     public $enabled;
 
     /**
-     * @var string the client id provided by Twitter
+     * @var string the consumer id (API Key) provided by Twitter
      */
-    public $clientId;
+    public $consumerId;
 
     /**
-     * @var string the client secret provided by Twitter
+     * @var string the consumer secret (API Secret) provided by Twitter
      */
-    public $clientSecret;
+    public $consumerSecret;
 
     /**
      * @var string readonly
@@ -38,7 +38,7 @@ class ConfigureForm extends Model
     public function rules()
     {
         return [
-            [['clientId', 'clientSecret'], 'required'],
+            [['consumerId', 'consumerSecret'], 'required'],
             [['enabled'], 'boolean'],
         ];
     }
@@ -50,8 +50,8 @@ class ConfigureForm extends Model
     {
         return [
             'enabled' => Yii::t('AuthTwitterModule.base', 'Enabled'),
-            'clientId' => Yii::t('AuthTwitterModule.base', 'Client ID'),
-            'clientSecret' => Yii::t('AuthTwitterModule.base', 'Client secret'),
+            'consumerId' => Yii::t('AuthTwitterModule.base', 'Consumer ID (API Key)'),
+            'consumerSecret' => Yii::t('AuthTwitterModule.base', 'Consumer secret (API Secret)'),
         ];
     }
 
@@ -75,11 +75,11 @@ class ConfigureForm extends Model
         $settings = $module->settings;
 
         $this->enabled = (boolean)$settings->get('enabled');
-        $this->clientId = $settings->get('clientId');
-        $this->clientSecret = $settings->get('clientSecret');
+        $this->consumerId = $settings->get('consumerId');
+        $this->consumerSecret = $settings->get('consumerSecret');
 
-//        $this->redirectUri = Url::to(['/user/auth/external', 'authclient' => 'twitter'], true);
-        $this->redirectUri = Url::to(['user/auth/twitter'], true);
+        $this->redirectUri = Url::to(['/user/auth/external', 'authclient' => 'twitter'], true);
+//        $this->redirectUri = Url::to(['user/auth/twitter'], true);
     }
 
     /**
@@ -91,8 +91,8 @@ class ConfigureForm extends Model
         $module = Yii::$app->getModule('auth-twitter');
 
         $module->settings->set('enabled', (boolean)$this->enabled);
-        $module->settings->set('clientId', $this->clientId);
-        $module->settings->set('clientSecret', $this->clientSecret);
+        $module->settings->set('consumerId', $this->consumerId);
+        $module->settings->set('consumerSecret', $this->consumerSecret);
 
         return true;
     }
