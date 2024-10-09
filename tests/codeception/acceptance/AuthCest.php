@@ -2,11 +2,10 @@
 
 namespace twitter\acceptance;
 
-use \AcceptanceTester;
+use AcceptanceTester;
 
 class AuthCest
 {
-
     public function testTwitterSignUpAndLogin(AcceptanceTester $I)
     {
         $I->wantTo('sign up with twitter');

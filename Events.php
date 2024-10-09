@@ -22,7 +22,7 @@ class Events
             $authClientCollection->setClient('twitter', [
                 'class' => TwitterAuth::class,
                 'consumerKey' => ConfigureForm::getInstance()->consumerId,
-                'consumerSecret' => ConfigureForm::getInstance()->consumerSecret
+                'consumerSecret' => ConfigureForm::getInstance()->consumerSecret,
             ]);
         }
     }

@@ -13,7 +13,7 @@ class TwitterAuth extends Twitter
      * @inheritdoc
      */
     public $attributeParams = [
-        'include_email' => 'true'
+        'include_email' => 'true',
     ];
 
     /**
