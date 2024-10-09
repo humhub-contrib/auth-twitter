@@ -7,6 +7,6 @@ return [
     'class' => 'humhubContrib\auth\twitter\Module',
     'namespace' => 'humhubContrib\auth\twitter',
     'events' => [
-        [Collection::class, Collection::EVENT_AFTER_CLIENTS_SET, ['humhubContrib\auth\twitter\Events', 'onAuthClientCollectionInit']]
+        [Collection::class, Collection::EVENT_AFTER_CLIENTS_SET, ['humhubContrib\auth\twitter\Events', 'onAuthClientCollectionInit']],
     ],
 ];
