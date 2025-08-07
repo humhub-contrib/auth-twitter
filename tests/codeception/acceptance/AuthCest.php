@@ -2,7 +2,7 @@
 
 namespace twitter\acceptance;
 
-use AcceptanceTester;
+use twitter\AcceptanceTester;
 
 class AuthCest
 {

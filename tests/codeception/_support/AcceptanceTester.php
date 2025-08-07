@@ -2,6 +2,8 @@
 
 namespace twitter;
 
+use _generated\AcceptanceTesterActions;
+
 /**
  * Inherited Methods
  * @method void wantToTest($text)
@@ -19,7 +21,7 @@ namespace twitter;
 */
 class AcceptanceTester extends \Codeception\Actor
 {
-    use _generated\AcceptanceTesterActions;
+    use AcceptanceTesterActions;
 
     /**
      * Define custom actions here
