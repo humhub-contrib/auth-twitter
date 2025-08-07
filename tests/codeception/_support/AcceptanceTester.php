@@ -19,7 +19,7 @@ use _generated\AcceptanceTesterActions;
  *
  * @SuppressWarnings(PHPMD)
 */
-class AcceptanceTester extends \Codeception\Actor
+class AcceptanceTester extends \AcceptanceTester
 {
     use AcceptanceTesterActions;
 

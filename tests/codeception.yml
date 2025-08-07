@@ -1,5 +1,5 @@
 actor: Tester
-namespace: user
+namespace: twitter
 bootstrap: _bootstrap.php
 coverage:
     c3_url: 'http://localhost:8080/index-test.php'
