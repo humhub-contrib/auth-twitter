@@ -6,7 +6,7 @@ use twitter\AcceptanceTester;
 
 class AuthCest
 {
-    public function testEnableTwitterAuth(AcceptanceTester $I)
+    public function testTwitterSignUpAndLogin(AcceptanceTester $I)
     {
         $I->amAdmin();
         $I->amOnPage('/auth-twitter/admin');
@@ -16,10 +16,8 @@ class AuthCest
         $I->fillField('input[name="ConfigureForm[consumerSecret]"]', 'TestSecret');
         $I->click('Save');
         $I->seeSuccess();
-    }
+        $I->logout();
 
-    public function testTwitterSignUpAndLogin(AcceptanceTester $I)
-    {
         $I->wantTo('sign up with twitter');
 
         $I->amOnPage('/user/auth/login');
