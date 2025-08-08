@@ -8,4 +8,5 @@
 
 return [
     'modules' => ['auth-twitter'],
+    'fixtures' => ['default'],
 ];
