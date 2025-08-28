@@ -2,6 +2,8 @@
 
 namespace twitter;
 
+use _generated\AcceptanceTesterActions;
+
 /**
  * Inherited Methods
  * @method void wantToTest($text)
@@ -17,9 +19,9 @@ namespace twitter;
  *
  * @SuppressWarnings(PHPMD)
 */
-class AcceptanceTester extends \Codeception\Actor
+class AcceptanceTester extends \AcceptanceTester
 {
-    use _generated\AcceptanceTesterActions;
+    use AcceptanceTesterActions;
 
     /**
      * Define custom actions here
