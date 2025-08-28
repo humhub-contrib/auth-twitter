@@ -1,17 +1,6 @@
 actor: Tester
-namespace: user
+namespace: twitter
 bootstrap: _bootstrap.php
-coverage:
-    c3_url: 'http://localhost:8080/index-test.php'
-    enabled: true
-    remote: false
-    include:
-    - ../authclient/*
-    - ../controllers/*
-    - ../models/*
-    - ../views/*
-    - ../Events.php
-    - ../Module.php
 settings:
     suite_class: \PHPUnit_Framework_TestSuite
     colors: true
@@ -24,7 +13,7 @@ settings:
     backup_globals: true
 paths:
     tests: codeception
-    log: codeception/_output
+    output: codeception/_output
     data: codeception/_data
     helpers: codeception/_support
     envs: ../../../humhub/tests/config/env

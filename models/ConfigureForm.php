@@ -13,7 +13,7 @@ use humhubContrib\auth\twitter\Module;
 class ConfigureForm extends Model
 {
     /**
-     * @var boolean Enable this authclient
+     * @var bool Enable this authclient
      */
     public $enabled;
 
@@ -74,12 +74,12 @@ class ConfigureForm extends Model
 
         $settings = $module->settings;
 
-        $this->enabled = (boolean)$settings->get('enabled');
+        $this->enabled = (bool)$settings->get('enabled');
         $this->consumerId = $settings->get('consumerId');
         $this->consumerSecret = $settings->get('consumerSecret');
 
         $this->redirectUri = Url::to(['/user/auth/external', 'authclient' => 'twitter'], true);
-//        $this->redirectUri = Url::to(['user/auth/twitter'], true);
+        //        $this->redirectUri = Url::to(['user/auth/twitter'], true);
     }
 
     /**
@@ -90,7 +90,7 @@ class ConfigureForm extends Model
         /** @var Module $module */
         $module = Yii::$app->getModule('auth-twitter');
 
-        $module->settings->set('enabled', (boolean)$this->enabled);
+        $module->settings->set('enabled', (bool)$this->enabled);
         $module->settings->set('consumerId', $this->consumerId);
         $module->settings->set('consumerSecret', $this->consumerSecret);
 
@@ -102,7 +102,7 @@ class ConfigureForm extends Model
      */
     public static function getInstance()
     {
-        $config = new static;
+        $config = new static();
         $config->loadSettings();
 
         return $config;
