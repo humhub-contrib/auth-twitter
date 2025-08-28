@@ -3,6 +3,7 @@ Changelog
 
 1.1.0 (Unreleased)
 -------------------------
+- Fix: Update module resources path
 - Enh #6: Use PHP CS Fixer
 - Enh #8: Migration to Bootstrap 5 for HumHub 1.18
 
